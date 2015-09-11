@@ -1,0 +1,17 @@
+.speechbtn{
+	position: absolute;
+	right: 3%;
+	left: 3%;
+	bottom: 0;
+	width: 94%;
+}
+ul{
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #777;
+}
+
+.hidden {
+  display: none !important;
+}

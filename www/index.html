@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href="css/ratchet.css" rel="stylesheet">
+        
+        <link href="css/ratchet-theme-ios.css" rel="stylesheet">
+        
+        <link href="css/app.css" rel="stylesheet">
+        <title>ProjectOscar</title>
+    </head>
+    <body>
+        <div class="app">
+            <!-- Nav Bar -->
+            <header class="bar bar-nav">
+              <a href="javascript:void(0);" class="icon icon-gear pull-left settingsmodal"></a>
+              <a href="javascript:void(0);" class="icon icon-info pull-right aboutmodal"></a>
+              <h1 class="title"><strong>ProjectOscar</strong></h1>
+            </header>
+
+            <!-- Main Body -->
+            <div class="content">
+                <div class="card welcome">
+                    <ul class="table-view">
+                        <li class="table-view-cell"><h2>Welcome to ProjectOscar</h2></li>
+                    </ul>
+                </div>
+
+                <div class="card firstvisit hidden">
+                    <ul class="table-view">
+                        <li class="table-view-cell">Hello...<p>It looks like this is your first time to use the ProjectOscar Mobile App.<p></br>Please click on the gear in the top left corner to setup the connection to your Oscar core.<p></br>Need Help? Feel free to click on the Info button in the top right corner to get more information about ProjectOscar.<p></br>Thanks-<p>tscrip</li>
+                    </ul>
+                </div>
+
+                <div class="speechbtn hidden">
+                    <button class="btn btn-positive btn-block speechactivate" onclick="recognition.start()">Speak</button>
+                </div>
+
+                <!-- About Modal -->
+                <div id="AboutModal" class="modal">
+                    <header class="bar bar-nav">
+                      <a href="javascript:void(0);" class="icon icon-close pull-right close-about"></a>
+                      <h1 class="title"><strong>About</strong></h1>
+                    </header>
+
+                    <div class="content">
+                      <div class="content-padded">
+                        <p>
+                        ProjectOscar (<strong>O</strong>pen <strong>S</strong>oure <strong> C</strong>omputed<strong> A</strong>udio<strong> R</strong>obot) is a project that was dreamt up by developer tscrip. He invisioned a world where technologies such as Siri &#174; or Google Now &#174; were open source platforms that allow anyone extend functionality. Currently Oscar is composed of two pieces.</p>
+                        <ul>
+                          <li>Oscar Core is a Python based webserver that responds to requests from requests.</li>
+                          <li>The multiplatform application that is used to initiate requests to Oscar.</li>
+                        </ul>
+                        <p>
+                        For more information, please check out the links below</p>
+                      </div>
+
+                      <ul class="table-view">
+                        <li class="table-view-cell">
+                          <a class="navigate-right btn-github">
+                            GitHub
+                          </a>
+                        </li>
+                        <li class="table-view-cell">
+                          <a class="navigate-right btn-twitter">
+                            Twitter
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                </div><!-- End About Modal -->
+
+                <!-- Settings Modal -->
+                <div id="SettingsModal" class="modal">
+                    <header class="bar bar-nav">
+                      <a href="javascript:void(0);" class="icon icon-close pull-right close-settings"></a>
+                      <h1 class="title"><strong>Settings</strong></h1>
+                    </header>
+
+                    <div class="content">
+                      <form class="input-group">
+                        <div class="input-row">
+                            <label>ServerURL</label>
+                            <input type="text" id="settings-serverurl" placeholder="http://192.168.1.5:8080/">
+                        </div>
+                        <div class="input-row">
+                            <label>API Key</label>
+                            <input type="text" id="settings-apikey" placeholder="LONG STRING KEY">
+                        </div>
+                        </form>
+                        <div class="debugging">
+                            <input type="search" id="q" name="q">
+                            <input type="button" value="Click Here To Speak" onclick="recognition.start()">
+                        </div>
+                    </div>
+                    
+
+                </div><!-- End Settings Modal -->
+          </div><!-- End Body -->
+            
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/ratchet.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
